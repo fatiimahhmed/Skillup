@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Partners | SkillUp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #e60bc1; 
+            --secondary-color: #020407;
+            --light-color: #f4f8fe;
+            --dark-color: #050000;
+            --text-color: #050000;
+            --white: #ffffff;
+            --border-color: #e6e9ec;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-signin {
+            background: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+        
+        .btn-register {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+        }
+        
+        .btn-signin:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .btn-register:hover {
+            background: #c90aa8;
+            transform: translateY(-2px);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Universities Grid */
+        .universities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .university-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(230, 11, 193, 0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .university-logo {
+            height: 80px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .university-logo img {
+            max-height: 100%;
+            max-width: 100%;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+        
+        .university-card:hover .university-logo img {
+            filter: grayscale(0%);
+        }
+        
+        .university-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .courses-count {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .universities-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">SkillUp</a>
+        
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="categories.html">Categories</a>
+            <a href="university.html" class="active">Universities</a>
+            <a href="about.html">About</a>
+        </div>
+        
+        <div class="auth-buttons">
+            <a href="loginskill.html" class="btn btn-signin">Sign In</a>
+            <a href="register.html" class="btn btn-register">Register</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <header class="page-header">
+            <h1>Our University Partners</h1>
+            <p>Learn from world-class universities and organizations</p>
+        </header>
+        
+        <div class="universities-grid">
+            <div class="university-card">
+                <div class="university-logo">
+                    <img src="stanford.png" alt="Stanford University">
+                </div>
+                <h3>Stanford University</h3>
+                <p class="courses-count">24 Courses Available</p>
+            </div>
+            
+            <div class="university-card">
+                <div class="university-logo">
+                    <img src="Images/MIT-logo-red-textandimage.png" alt="MIT">
+                </div>
+                <h3>MIT</h3>
+                <p class="courses-count">18 Courses Available</p>
+            </div>
+            
+            <div class="university-card">
+                <div class="university-logo">
+                    <img src="Images/16c84f546fbfd1d5d939f8d576864ece.png" alt="Harvard University">
+                </div>
+                <h3>Harvard University</h3>
+                <p class="courses-count">22 Courses Available</p>
+            </div>
+            
+            <div class="university-card">
+                <div class="university-logo">
+                    <img src="download.jpeg" alt="University of Oxford">
+                </div>
+                <h3>University of Oxford</h3>
+                <p class="courses-count">15 Courses Available</p>
+            </div>
+            
+            <div class="university-card">
+                <div class="university-logo">
+                    <img src="download (1).png" alt="University of Cambridge">
+                </div>
+                <h3>University of Cambridge</h3>
+                <p class="courses-count">17 Courses Available</p>
+            </div>
+            
+            <div class="university-card">
+                <div class="university-logo">
+                    <img src="download.png" alt="Yale University">
+                </div>
+                <h3>Yale University</h3>
+                <p class="courses-count">12 Courses Available</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

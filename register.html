@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - SkillUp</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffe6f7; /* Solid pink background */
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #e600e6;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    .btn {
+      padding: 0.5rem 1.2rem;
+      border-radius: 10px;
+      background: #e600e6;
+      color: white;
+      border: 2px solid #e600e6;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: white;
+      color: #e600e6;
+      transform: scale(1.05);
+    }
+
+    .form-container {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 3rem auto;
+      padding-right: 0.75rem;
+      padding: 5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .register-form{
+      padding-right: 2.5rem;
+    }
+
+    .form-container h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container label {
+      /* display: block; */
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #444;
+      /* text-align: left; */
+    }
+
+    .form-container p {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .form-container a {
+      color: #e600e6;
+      text-decoration: none;
+    }
+
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">SkillUp</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="btn">Home</a></li>
+        <li><a href="loginskill.html" class="btn">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-container">
+    <h2>Create Your Account</h2>
+    <form id="register-form">
+      <input type="text" id="register-name" placeholder="Full Name" required>
+      <input type="email" id="register-email" placeholder="Email Address" required>
+      <input type="password" id="register-password" placeholder="Password" required>
+      <label>
+        <input type="checkbox" id="show-password"> Show Password
+      </label>
+      <button type="submit" class="btn">Register</button>
+    </form>
+    <p>Already have an account? <a href="loginskill.html">Sign In</a></p>
+  </main>
+  <script src="register.js"></script>
+</body>
+</html>
